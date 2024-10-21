@@ -1,0 +1,49 @@
+.block_lessons .card-title{
+    display: none !important;
+}
+.block_lessons .card_name{
+    border-left: 3px solid #00446e;
+    padding-left: 6px;
+}
+.block_lessons .course_card {
+    box-shadow: 0 1px 4px lightgrey !important;
+    position: relative;
+    height: 100%;
+}
+.block_lessons .course_card .card-body a h5{
+    min-height: 52px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.block_lessons .module {
+    position: absolute;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-size: 13px;
+    background: #ea232a;
+    top: 7px;
+    left: 7px;
+}
+#courses .course_card {
+    box-shadow: 0 1px 4px lightgrey !important;
+    position: relative;
+    height: 100%;
+}
+#courses .module {
+    position: absolute;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-size: 13px;
+    background: #ea232a;
+    top: 7px;
+    left: 7px;
+}
+
+#courses .inactive,
+#course_list .inactive {
+    opacity: 0.5;
+}
+#page-blocks-lessons-courses #courses .card-body a h5 {
+    font-size: 15px;
+    font-weight: 500;
+}

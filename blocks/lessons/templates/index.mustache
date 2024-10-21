@@ -1,0 +1,42 @@
+<div class="d-flex align-items-center justify-content-between">
+    <div>
+        <h5 class="card_name mb-0">{{#str}} pluginname, block_lessons {{/str}}</h5>
+    </div>
+    <div>
+        {{#viewmore}}
+            <div class="w-100 mr-3 d-flex justify-content-end">
+                <a href="{{config.wwwroot}}/blocks/lessons/courses.php" target="_blank">
+                    {{#str}} viewmore, block_lessons {{/str}}
+                </a>
+            </div>
+        {{/viewmore}}
+    </div>
+</div>
+<div id="course_list" class="row mt-4">
+    {{#courses}}
+    <div class="col-lg-4 col-md-4 col-12 mb-5 {{^visible}} inactive {{/visible}}">
+        <div class="card course_card">
+            <a href="{{config.wwwroot}}/course/view.php?id={{id}}">
+                <img src="{{image}}" class="card-img-top" alt="..." width="200" height="200">
+            </a>
+            <div class="card-body">
+                <a href="{{config.wwwroot}}/course/view.php?id={{id}}">
+                    <h5 class="">{{name}}</h5>
+                </a>
+                <p class="card-text">
+                    {{#shortentext}} 65, {{{description}}} {{/shortentext}}
+                    {{^description}}
+                        <span class="text-primary">{{#str}} nocoursedesc, block_lessons {{/str}}</span>
+                    {{/description}}
+                </p>
+            </div>
+            <div class="module text-white">
+                <span>{{category}}</span>
+            </div>
+        </div>
+    </div>
+    {{/courses}}
+    {{^courses}}
+        <div class="ml-3 alert alert-info w-100 text-center mr-3">{{#str}} nocourseavailable, block_lessons {{/str}}</div>
+    {{/courses}}
+</div>

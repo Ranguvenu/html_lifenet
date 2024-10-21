@@ -1,0 +1,29 @@
+{{#response}}
+    {{#records}}
+        <div id="courses" class="row mt-4">
+            {{#hascourses}}
+                <div class="{{cardClass}} {{^visible}} inactive {{/visible}}">
+                    <div class="card course_card">
+                        <a href="{{globals.config.wwwroot}}/course/view.php?id={{id}}">
+                            <img src="{{image}}" class="card-img-top" alt="..." width="200" height="200">
+                        </a>
+                        <div class="card-body">
+                            <a href="{{globals.config.wwwroot}}/course/view.php?id={{id}}">
+                                <h5 class="" style="min-height: 90px">{{name}}</h5>
+                            </a>
+                            <p class="card-text">
+                                {{#shortentext}} 65, {{{description}}} {{/shortentext}}
+                                {{^description}}
+                                    <span class="text-primary">{{#str}} nocoursedesc, block_lessons {{/str}}</span>
+                                {{/description}}
+                            </p>
+                        </div>
+                        <div class="module text-white">
+                            <span>{{category}}</span>
+                        </div>
+                    </div>
+                </div>
+            {{/hascourses}}
+        </div>
+    {{/records}}
+{{/response}}

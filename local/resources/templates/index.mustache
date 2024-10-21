@@ -1,0 +1,32 @@
+<table class="generaltable" id="resources">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>{{#str}} course, local_resources {{/str}}</th>
+            <th>{{#str}} resources, local_resources {{/str}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#records}}
+        <tr class="{{^visible}} inactive {{/visible}}">
+            <td>{{count}}</td>
+            <td>
+                <a href="{{config.wwwroot}}/course/view.php?id={{id}}">{{name}}</a>
+            </td>
+            <td>
+                {{#resources}}
+                    <div class="rs_content">
+                        <div class="activityiconcontainer smaller {{purpose}} {{#branded}}isbranded{{/branded}} mr-2 ">
+                            <img src="{{iconurl}}" class="activityicon" data-region="activity-icon" alt="{{type}}">
+                        </div>
+                        <a {{class}} {{extra}} href="{{resourceurl}}">{{rname}}<br></a>
+                    </div>
+                {{/resources}}
+                {{^resources}}
+                    {{#str}} noresourcesavavailable, local_resources {{/str}}
+                {{/resources}}
+            </td>
+        </tr>
+        {{/records}}
+    </tbody>
+</table>

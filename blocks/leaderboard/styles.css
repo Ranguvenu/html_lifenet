@@ -1,0 +1,474 @@
+.block_learnerdashboard .pagination {
+    display: none;
+}
+.block_learnerdashboard .card-title {
+    font-size: 1.171875rem;
+    text-align: center;
+    padding: 0 40px;
+    font-weight: 600;
+    display: block !important;
+    margin-bottom: 0 !important;
+    /*margin-top: -30px;*/
+}
+#page-my-index #region-main .block_learnerdashboard .card-body {
+    padding-top: 1rem !important;
+}
+#page-my-index .block_learnerdashboard .content .custom_module_type_filter {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    margin-top: -2rem;
+}
+.block_learnerdashboard .learner_box_all_data .learner_box .learnerbox_img .courseimg_bg {
+    width: 86px;
+    height: 86px;
+    border-radius: 5px;
+    box-shadow: none;
+    position: inherit;
+    top: 0;
+    background-size: cover;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 0px;
+
+}
+.learner_box_all_data:nth-child(4n+1) .learner_se .learnerimg {
+    background-image: url([[pix:block_learnerdashboard|science]]);
+    width: 86px;
+    height: 86px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.learner_box_all_data:nth-child(4n+2) .learner_se .learnerimg {
+    background-image: url([[pix:block_learnerdashboard|mathematics]]);
+    width: 86px;
+    height: 86px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.learner_box_all_data:nth-child(4n+3) .learner_se .learnerimg {
+    background-image: url([[pix:block_learnerdashboard|social]]);
+    width: 86px;
+    height: 86px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.learner_box_all_data:nth-child(4n+4) .learner_se .learnerimg {
+    background-image: url([[pix:block_learnerdashboard|english]]);
+    width: 86px;
+    height: 86px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ex_arrow_right {
+    background-image:url([[pix:theme_ktm|custom_img/next]]);
+    width: 12px;
+    height: 12px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+.upcoming_sessions {
+    background-image:url([[pix:theme_ktm|custom_img/upcoming_sessions]]);
+}
+.inprogress_tests {
+    background-image:url([[pix:theme_ktm|custom_img/inprogress_tests]]);
+}
+.my_reports {
+    background-image:url([[pix:theme_ktm|custom_img/my_reports]]);
+}
+.completed_chapters {
+    background-image:url([[pix:theme_ktm|custom_img/completed_chapters]]);
+}
+.learnerbox_extrainfo_icon {
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    margin-right: 5px;
+}
+.extrainfo_box_heading {
+    min-width: 170px;
+    display: flex;
+    align-items: flex-start;
+}
+.block_learnerdashboard .learner_box_all_data .learner_box {
+    border: 1px solid #01a5f1;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 0px;
+    padding: 0 10px 0 0;
+    overflow: hidden;
+    border-bottom: 1px solid #e6eaef;
+}
+.block_learnerdashboard .learner_box_all_data .learnerbox_extrainfo .extrainfo_box {
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+    margin-bottom: 6px;
+}
+.block_learnerdashboard .learner_box_all_data .learnerbox_extrainfo .extrainfo_box .extrainfo_box_count {
+    font-weight: 500;
+    background-color: #f6f0fc;
+    color: #9d71e8;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.block_learnerdashboard .learner_box_all_data .learnerbox_extrainfo {
+    border: 1px solid #01a5f1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; 
+    margin-bottom: 15px;
+    padding: 8px 15px 4px 30px;
+    clear: both;   
+    border-top: none;
+}
+#page-my-index .block_learnerdashboard .content .leaner_name {
+    margin-left: 0 !important;
+    padding: 0 10px;
+    margin-top: -27px;
+}
+#page-my-index .block_learnerdashboard .content .custom_module_type_filter {
+    padding: 0 10px;
+}
+#page-my-index #block-region-content .block_learnerdashboard {
+    border: 0;
+}
+.learner_box .main_subjectlink:hover {
+    color: #000;
+}
+.hi_username {
+    font-weight: 400;
+    color: #595860;
+    text-shadow: none;
+}
+.block_learnerdashboard .custom_module_type_filter {
+    margin-bottom: 8px;
+}
+.block_learnerdashboard .custom_module_type_filter .learnerdashboard_order_setting {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    padding: 0.175rem 0.75rem;
+    /*color: #495057;*/
+    color: #000;
+    width: 150px;
+    margin-left: 5px;
+}
+.block_learnerdashboard .upcoming_session_block {
+    clear: both;
+}
+.block_learnerdashboard .subscription_date {
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    color: #379c2b;
+    font-weight: 600;
+}
+.custom_module_type_filter {
+    padding: 0 15px;
+}
+/*#page-my-index .block.block_learnerdashboard .content {
+    
+}*/
+.text_grey {
+    color: #7f889f;
+}
+.learner_box_details {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.learner_box_name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: .3rem;
+}
+.learner_box {
+    padding: 10px 10px 12px;
+    color: #000;
+    margin-bottom: 30px;
+    font-size: 16px;
+    border: 1px solid #e6eaef;
+    border-radius: 15px;
+}
+.icon_arrow_right{
+    color: #7f889f;
+}
+.chapters{
+    background-image: url([[pix:block_learnerdashboard|chapters]]);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: block;
+}
+.concepts{
+    background-image: url([[pix:block_learnerdashboard|concepts]]);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: block;
+}
+.words{
+   background-image: url([[pix:block_learnerdashboard|words]]);
+   width: 20px;
+   height: 20px;
+   background-size: cover;
+   display: block; 
+}
+
+/*.learner_se{
+    background-color: #6addc9;
+}
+.learner_box_all_data:nth-child(4n+1) .learner_se {
+    background-color: #6addc9;
+}
+.learner_box_all_data:nth-child(4n+2) .learner_se {
+    background-color: #9ecbfe;
+}
+.learner_box_all_data:nth-child(4n+3) .learner_se {
+    background-color: #f76964;
+}
+.learner_box_all_data:nth-child(4n+4) .learner_se {
+    background-color: #d38551;
+}*/
+.leaner_name {
+    color: #9d71e8;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 1px 2px 3px rgb(0 0 0 / 30%);
+}
+.leaner_letter{
+    font-weight: 900;
+    font-size: 65px;
+}
+.lk_clr{
+    color: #2086fa;
+}
+.lt_clr{
+    color: #149d39;
+}
+.learnerbox_img{
+    padding-right: 0px !important;
+}
+.right_arrow{
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 768px) and (max-width: 1199px){ 
+    #page-my-index .block_learnerdashboard .content .custom_module_type_filter {
+        margin-top: -1.9rem;
+    }
+    .block_learnerdashboard .card-title {
+        /*margin-top: -25px*/;
+    }
+    #page-my-index .block_learnerdashboard .content .leaner_name,
+    .block_learnerdashboard .card-title {
+        font-size: 16px;
+    }
+    .block_learnerdashboard .learner_box_all_data .learner_box .learner_box_details {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .block_learnerdashboard .learner_box_all_data .learner_box .learner_box_name {
+        min-height: 54px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px){ 
+    #page-my-index .block_learnerdashboard .content .leaner_name {
+        margin-top: -23px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px){ 
+    .block_learnerdashboard .learner_box_all_data .learner_box {
+        padding: 10px 10px;
+    }
+    .block_learnerdashboard .learner_box_all_data .learner_box .learnerbox_img .courseimg_bg {
+        border-top-left-radius: 10px !important;
+        border-bottom-left-radius: 10px !important;
+        margin-bottom: 5px;
+        border-radius: 10px;
+    }
+    .block_learnerdashboard .learner_box_all_data .learnerbox_extrainfo .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1199px){ 
+    .block_learnerdashboard .learner_box_all_data .learner_box .learnerbox_img {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .block_learnerdashboard .learner_box_all_data .learner_box .learnerbox_detailsdata {
+        flex: 0 0 66.6666666667%;
+        max-width: 66.6666666667%;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1290px){
+    /*.block_learnerdashboard .learner_box_all_data.col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }*/
+    .session_date, .session_time {
+        font-size: 12px !important;
+        padding: 6px !important;
+    }
+}
+
+@media (max-width: 767px){
+    .block_learnerdashboard .learner_box_all_data .learner_box {
+        padding: 10px 10px 0;
+    }
+    .block_learnerdashboard .learner_box_all_data .learner_box .learnerbox_img .courseimg_bg {
+        border-top-left-radius: 10px !important;
+        border-bottom-left-radius: 10px !important;
+        margin-bottom: 5px;
+        border-radius: 10px;
+    }
+    #page-my-index .block_learnerdashboard .content .leaner_name {
+        margin-top: inherit;
+        padding: 0 20px;
+    }
+    .block_learnerdashboard .card-title {
+        margin-top: inherit;
+        text-align: left;
+    }
+    #page-my-index .block_learnerdashboard .content .custom_module_type_filter {
+        display: block;
+        margin-top: inherit;
+    }
+    .block_learnerdashboard .learner_box_all_data .learnerbox_extrainfo {
+        padding: 10px;   
+    }
+    .subscribe_with_us {
+        width: 100% !important
+    }
+    .learner_box_all_data:nth-child(4n+1) .learner_se .learnerimg,
+    .learner_box_all_data:nth-child(4n+2) .learner_se .learnerimg,
+    .learner_box_all_data:nth-child(4n+3) .learner_se .learnerimg,
+    .learner_box_all_data:nth-child(4n+4) .learner_se .learnerimg {
+        margin-left: -5px;
+    }
+    /*.learner_box_name {
+        text-align: center;
+    }*/
+    .learnerbox_img{
+        padding-right: 15px !important;
+    }
+    .learner_box_details{
+        font-size: 13px;
+    }
+    .right_arrow{
+        display: block;
+        text-align: right;
+    }
+}
+/*kiran css starts here*/
+#page-my-index .block_learnerdashboard .custom_module_type_filter label {
+    font-size: 18px;
+    font-weight: 600;
+}
+@media (min-width: 1025px) and (max-width: 1199px){
+    .block_learnerdashboard .learner_box_all_data .learnerbox_extrainfo {
+        padding: 8px 40px 4px 10px;
+    }
+    .block_learnerdashboard .learner_box_all_data .learner_box .learner_box_name {
+        min-height: inherit;
+    }
+}
+
+body#page-blocks-lernerdashboard-inprogress_tests .page_head {
+    display: none;
+}
+body#page-blocks-lernerdashboard-inprogress_tests #page-header .page_bcrum{
+    justify-content: inherit!important;
+}
+#page-blocks-lernerdashboard-inprogress_tests .inprogress-tests .block-heading {
+    text-align: center;
+    color: #9d71e8;
+    font-size: 20px;
+}
+body#page-blocks-learnerdashboard-completedtests .page_head {
+    display: none;
+}
+body#page-blocks-learnerdashboard-completedtests #page-header .page_bcrum{
+    justify-content: inherit!important;
+}
+#page-blocks-learnerdashboard-completedtests #region-main {
+    padding-top: 0px;
+}
+#page-blocks-lernerdashboard-inprogress_tests #region-main {
+    padding-top: 0px;
+}
+#page-my-index #block-region-content .block_learnerdashboard #masterconcepts_learnerdashboard .learner_box_all_data {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+
+#page-blocks-lernerdashboard-inprogress_tests .learner_box .cm_box_test .cm_box_padl {
+    padding: 10px;
+}
+#page-blocks-lernerdashboard-inprogress_tests .learner_box .cm_box_test > .row,
+#page-blocks-learnerdashboard-completedtests .learner_box .cm_box_test > .row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#page-blocks-learnerdashboard-completedtests .learner_box .cm_box_test .cm_box_padl,
+#page-blocks-learnerdashboard-completedtests .learner_box .cm_box_test .col-md-4.col-6,
+#page-blocks-learnerdashboard-completedtests .learner_box .cm_box_test .col-md-3.col-6{
+    padding: 10px;
+}
+.block_leaderboard .card-title{
+    display: none !important;
+}
+.block_leaderboard .card_name{
+    border-left: 3px solid #00446e;
+    padding-left: 6px;
+}
+#leaderboard{
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 20%) !important;
+}
+#leaderboard tbody tr{
+    font-weight: 500;
+}
+#leaderboard tbody tr:nth-child(1) td:first-child span {
+    background: #f8c82c;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+#leaderboard tbody tr:nth-child(2) td:first-child span {
+    background: #b0b1b8;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+#leaderboard tbody tr:nth-child(3) td:first-child span {
+    background: #c47e39;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#leaderboard .sign-sup {
+    vertical-align: super;
+    font-size: .6428571428571429em;
+    line-height: .6428571428571429em;
+}
+#leaderboard .username{
+    color: #000;
+    margin-left:15px;
+}

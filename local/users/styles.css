@@ -1,0 +1,42 @@
+#page-local-users-registration .usermenu,
+#page-local-users-verification .usermenu,
+#page-local-users-confirm .usermenu {
+    display: none;
+}
+
+#page-local-users-verification .verificationform {
+    display: flex;
+    justify-content: center;
+
+    #fitem_id_country {
+        flex: 0 0 60%;
+        max-width: 60%;
+        margin-right: -23rem;
+
+        #id_error_country {
+            margin-left: -5rem;
+        }
+    }
+
+    #fitem_id_phone1 {
+        .col-form-label {
+            display: none !important;
+        }
+
+        #id_error_phone1 {
+            margin-top: 40px;
+            margin-left: -12rem;
+        }
+    }
+}
+
+#page-local-users-verification #fitem_id_sentotplink {
+    .col-form-label {
+        display: none !important;
+    }
+    .felement {
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+}

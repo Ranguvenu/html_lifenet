@@ -1,0 +1,87 @@
+.block_statistics .stats {
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 4px lightgrey;
+    margin-bottom:1rem;
+}
+
+.block_statistics .enrolled {
+    background: #f6f4fb;
+}
+.block_statistics .inprogress {
+    background: #f4fcff;
+}
+.block_statistics .completed {
+    background: #f2fdfd;
+}
+.block_statistics .enrolled-statistics {
+    border: 1px solid #865cdb2e;
+    padding: 25px 20px;
+    border-radius: 3px;
+    background: #f6f4fb;
+}
+
+.block_statistics .inprogress-statistics {
+    border: 1px solid #7fc9e545;
+    padding: 25px 20px;
+    border-radius: 3px;
+    background: #f4fcff;
+}
+
+.block_statistics .completed-statistics {
+    border: 1px solid #d5e9e9;
+    padding: 25px 20px;
+    border-radius: 3px;
+    background: #f2fdfd;
+}
+.block_statistics .inprogress-statistics,.completed-statistics,.enrolled-statistics, .category{
+    font-size: 21px;
+}
+.block_statistics .inprogress-statistics .users{
+    color: #49b8e7;
+    font-size: xx-large;
+}
+.block_statistics .completed-statistics .users{
+    color: #49c094;
+    font-size: xx-large;
+}
+.block_statistics .enrolled-statistics .users {
+    color: #835be2;
+    font-size: xx-large;
+}
+.block_statistics .stats_column .stats img{
+    max-width: 60px;
+    flex-shrink: 0;
+    height: auto;
+    width: 60px;
+    object-fit: contain;
+    height: 60px;
+}
+.block_statistics .card-title:first-child{
+    display:none !important;
+  }
+.block_statistics .stat_card{
+    gap:8px;
+}
+.block_statistics .stats_container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.block_statistics .stats .users {
+    font-weight: 600;
+}
+@media (max-width: 992px) { 
+    .block_statistics .stats .category{
+        font-size:18px
+    }
+    .block_statistics .stat_card {
+        padding:16px;
+    }
+    .block_statistics .stats_column .stats img {
+        max-width: 40px;
+    }
+    .block_statistics .stats .users {
+        font-size: 22px;
+        font-weight: 600;
+    }
+}

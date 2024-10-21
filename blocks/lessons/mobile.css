@@ -1,0 +1,60 @@
+.block_lessons .core-course-list-card {
+    --ion-card-horizontal-margin: 0px;
+    --ion-card-radius: 10px;
+    --avatar-size: 48px;
+    --avatar-margin: 12px;
+    height: calc(100% - var(--card-vertical-margin) - var(--card-vertical-margin));
+    margin-top: var(--card-vertical-margin);
+    margin-bottom: var(--card-vertical-margin);
+    border: 1px solid #EEE;
+}
+.block_lessons .core-course-thumb {
+    background: var(--ion-item-background);
+    background: var(--course-color, white);
+    padding-top: 40%;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    pointer-events: auto;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+.block_lessons .core-course-thumb img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    min-width: 100%;
+}
+.block_lessons .core-course-fullname {
+    color: var(--primary);
+}
+.block_lessons .core-course-category {
+    color: #fff;
+    position: absolute;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-size: 13px;
+    background: #ea232a;
+    top: 4px;
+}
+.block_lessons ion-col {
+    margin-bottom: 10px;
+}
+.block_lessons .title p.item-heading {
+    color: #144270;
+    font-size: 18px;
+    font-weight: bold;
+}
+.block_lessons ion-item.title::part(native) {
+    padding-inline-start: 0px;
+}
+.block_lessons {
+    --border-style: none;
+}
+.block_lessons .button.button-small{
+    min-height: 25px;
+}

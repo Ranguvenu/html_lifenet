@@ -1,0 +1,53 @@
+.leaderboard-points {
+    display: inline-block;
+    white-space: nowrap;
+}
+.leaderboard-points .pts {
+    display: inline-block;
+    letter-spacing: 0;
+}
+.leaderboard-points .sign-sup {
+    vertical-align: super;
+    font-size: .6428571428571429em;
+    line-height: .6428571428571429em;
+}
+.users-list > ion-item {
+    padding-inline-start: 0px;
+    border-bottom: 1px solid #EEE;
+}
+
+.users-list > ion-item .item-native {
+    padding-inline-start: 0px;
+}
+ion-card.block_leaderboard {
+    --border-style: none;
+    border-style: none;
+}
+
+.title p.item-heading {
+    color: #144270;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+ion-list.users-list {
+    border: 1px solid #EEE;
+}
+ion-item.title .item-native {
+    padding-inline-start: 0px;
+}
+.user-info .rank ion-badge {
+    --background: unset;
+}
+.user-info:nth-child(1) .rank ion-badge {
+    --background: #f8c82c;
+}
+.user-info:nth-child(2) .rank ion-badge {
+    --background: #b0b1b8;
+}
+.user-info:nth-child(3) .rank ion-badge {
+    --background: #c47e39;
+}
+.block_leaderboard .button.button-small {
+    min-height: 25px;
+}

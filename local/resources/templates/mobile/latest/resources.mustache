@@ -1,0 +1,43 @@
+{{=<% %>=}}
+<core-empty-box *ngIf="!CONTENT_OTHERDATA.courses || !CONTENT_OTHERDATA.courses.length"
+        image="assets/img/icons/courses.svg"
+        [message]="'core.courses.nocourses' | translate">
+</core-empty-box>
+
+<!--     <core-search-box (onSubmit)="search($event)" (onClear)="clearSearch()" [placeholder]="'addon.local_resources.search' | translate"
+            autocorrect="off" spellcheck="false" lengthCheck="4" searchArea="AddonMessagesContacts"></core-search-box> -->
+
+    <ion-grid class="ion-no-padding block_lessons" *ngIf="CONTENT_OTHERDATA.courses && CONTENT_OTHERDATA.courses.length">
+        <ion-row class="ion-no-padding">
+            <ion-col *ngFor="let course of CONTENT_OTHERDATA.courses" class="ion-no-padding" size="12" size-sm="6" size-md="6" size-lg="4" size-xl="3">
+    <ion-card>
+        <ion-item class="course ion-text-wrap" color="primary" lines="full">
+            <ion-label>
+                <p class="item-heading">
+                    <core-format-text [text]="course.name" contextLevel="course" [contextInstanceId]="course.id"></core-format-text>
+                </p>
+            </ion-label>
+        </ion-item>
+        <ng-container *ngIf="course.hasresources">
+            <ion-item *ngFor="let resource of course.resources" class="resource" [disabled]="resource.disabled" [ngClass]="{disabled: resource.disabled}" [href]="resource.resourceurl" data-open-in="app" inApp="true" capture="true" core-link button>
+                <core-mod-icon slot="start" [modicon]="resource.modicon" [modname]="resource.modname" [componentId]="resource.componentid">
+                </core-mod-icon>
+                    <ion-label class="ion-text-wrap">
+                        <p class="item-heading">
+                            <core-format-text [text]="resource.rname" contextLevel="module" [contextInstanceId]="resource.id"></core-format-text>
+                            </p>
+                    </ion-label>
+                </ion-item>
+</ng-container>
+<ng-container *ngIf="!course.hasresources">
+    <core-empty-box 
+        image="assets/img/icons/courses.svg"
+        [message]="'plugin.local_resources.noresourcesavavailable' | translate">
+</core-empty-box>
+</ng-container>
+    </ion-card>
+</ion-col>
+<core-infinite-loading [enabled]="CONTENT_OTHERDATA.canLoadMore" (action)="loadMoreCourses($event)" [error]="CONTENT_OTHERDATA.loadMoreError"></core-infinite-loading>
+        </ion-row>
+    </ion-grid>    
+

@@ -1,0 +1,52 @@
+.block_statistics .summary_card ion-row {
+    width: 100%;
+}
+.block_statistics .summary_card .statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.block_statistics .summary_card .enrolled .count {
+    background-color: #12C0F0;
+}
+.block_statistics .summary_card .inprogress .count {
+    background-color: #FF9100;
+}
+.block_statistics .summary_card .completed .count {
+    background-color: #00AE00;
+}
+.block_statistics .summary_card {
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+}
+.block_statistics .summary_card .label {
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px 10px 0px;
+    font-weight: 600;
+}
+.block_statistics .summary_card .count {
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block_statistics .summary-info {
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+    padding: 10px 0px;
+    background-image: url("@@WWWROOT@@/blocks/statistics/pix/statistics-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

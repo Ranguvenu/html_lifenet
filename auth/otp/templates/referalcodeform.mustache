@@ -1,0 +1,14 @@
+{{#js}}
+
+require(['auth_otp/referalcodeform'], function(s) {
+
+    var options = {contextid: 1,
+                    component: 'auth_otp',
+                    callback: 'referalcode_form',
+                    form_status: 0,
+                    plugintype: 'auth',
+                    pluginname: 'otp'};
+
+    s.init(options);
+});
+{{/js}}

@@ -1,0 +1,56 @@
+{{#admin}}
+    <div>
+        <a href="{{config.wwwroot}}/blocks/broadcast/broadcast.php">
+            <button class="btn btn-primary">
+                {{#str}} addnewmessage, block_broadcast {{/str}}
+            </button>
+        </a>
+    </div>
+    <br>
+    <table class="generaltable" id="broadcast">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>{{#str}} country, block_broadcast {{/str}}</th>
+                <th>{{#str}} message, block_broadcast {{/str}}</th>
+                <th>{{#str}} actions, block_broadcast {{/str}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#messages}}
+                <tr>
+                    <td>{{count}}</td>
+                    <td>{{country}}</td>
+                    <td>{{message}}</td>
+                    <td>
+                        <a href="{{config.wwwroot}}/blocks/broadcast/broadcast.php?id={{id}}" class='course_extended_menu_itemlink' title="{{#str}} edit, block_broadcast {{/str}}" data-contextid="1">
+                            <span class='createicon'>
+                                <i class='createiconchild fa fa-pencil' aria-hidden='true'></i>
+                            </span>
+                        </a>
+                         <a href="javascript:void(0)" title="{{#str}} delete, block_broadcast{{/str}}" onclick="(function(e){ require('block_broadcast/broadcast').deleteModal({id:{{id}}, context:1}) })(event)">
+                        <i class="fa fa-trash fa-fw" aria-hidden="true" aria-label="Delete"></i>
+                    </a>
+                    </td>
+                </tr>
+            {{/messages}}
+        </tbody>
+    </table>
+{{/admin}}
+
+{{^admin}}
+    {{#motivationmessage}}
+            <div class=" broadcast_row mx-0 d-flex align-items-baseline justify-content-between">
+                <div class="broadcast_img">
+                    <img src="{{config.wwwroot}}/blocks/broadcast/pix/prayer.png" class="img-fluid hand_img">
+                </div>
+                <div class=" message_column px-2">
+                     {{{motivationmessage}}}
+                </div>
+                
+            </div>
+            <div class="position-relative">
+                    <img src="{{config.wwwroot}}/blocks/broadcast/pix/BG.png" width="auto" class="img-fluid bottom_layer_img">
+            </div>
+    {{/motivationmessage}}
+{{/admin}}

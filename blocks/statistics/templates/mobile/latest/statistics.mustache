@@ -1,0 +1,23 @@
+{{=<% %>=}}
+<ion-item class="summary_card">
+    <ion-row class="summary-info">
+        <ion-col size="4">
+            <div class="statistics enrolled">
+                <div class="label">{{ 'plugin.block_statistics.enrolled' | translate }}</div>
+                <span class="count"><% enrolled %></span>
+            </div>
+        </ion-col>
+        <ion-col size="4">
+            <div class="statistics inprogress">
+                <div class="label">{{ 'plugin.block_statistics.inprogress' | translate }}</div>
+                <span class="count"><% inprogress %></span>
+            </div>
+        </ion-col>
+        <ion-col size="4">
+            <div class="statistics completed">
+                <div class="label">{{ 'plugin.block_statistics.completed' | translate }}</div>
+                <span class="count"><% completed %></span>
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-item>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLDB PATH="local/custom_courses/db" VERSION="2024062700" COMMENT="Schema for course completion popup">
+    <TABLES>
+        <TABLE NAME="custom_courses_certificate_data" COMMENT="Table to track course completions for popup">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>               
+                <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true"/>
+                <FIELD NAME="templateid" TYPE="int" LENGTH="10" NOTNULL="false"/>
+                <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>

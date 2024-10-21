@@ -1,0 +1,8 @@
+#resources .rs_content {
+    display: flex;
+    align-items: center;
+}
+
+#resources .inactive {
+    opacity: 0.5;
+}

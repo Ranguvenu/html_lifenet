@@ -1,0 +1,473 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<div class="row ml-0 mr-0 login_main">
+        <div class="col-md-4 p-0">
+        {{#logourl}}
+            <div id="loginlogo" class="login-logo">
+                <img id="logoimage" src="{{logourl}}" class="img-fluid" alt="{{sitename}}"/>
+                <h1 class="login-heading sr-only">{{#str}} loginto, core, {{sitename}} {{/str}}</h1>
+            </div>
+        {{/logourl}}
+        {{^logourl}}
+            <h1 class="login-heading mb-4">{{#str}} loginto, core, {{sitename}} {{/str}}</h1>
+        {{/logourl}}
+    </div>
+    <div class="col-md-8 d-flex align-items-center justify-content-between">
+        <div class="card login_card mx-auto">
+            <div class="card-block">
+
+   <!--              {{#logourl}}
+                    <h1 class="h2 text-center" >
+                        <span class="sr-only">{{sitename}}: {{#str}} login {{/str}}</span>
+                        <img src="{{logourl}}" class="img-fluid" alt=""/>
+                    </h1>
+                {{/logourl}}
+                {{^logourl}}
+                    <h1 class="h2 card-header text-center" aria-label="{{sitename}}: {{#str}} login {{/str}}">{{sitename}}</h1>
+                {{/logourl}} -->
+
+                <div class="card-body">
+                    {{#cansignup}}
+                        <div class="sr-only">
+                            <a href="{{signupurl}}">{{#str}} tocreatenewaccount {{/str}}</a>
+                        </div>
+                    {{/cansignup}}
+
+                    {{#error}}
+                        <div class="loginerrors mt-3">
+                            <a href="#" id="loginerrormessage" class="accesshide">{{error}}</a>
+                            <div class="alert alert-danger" role="alert" data-aria-autofocus="true">{{error}}</div>
+                        </div>
+                    {{/error}}
+
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-12">
+                  <!--           {{#logourl}}
+                                    <h2 class="card-header">
+                                        <img src="{{logourl}}" title="{{sitename}}" alt="{{sitename}}"/>
+                                    </h2>
+                            {{/logourl}}
+                            {{^logourl}}
+                                <h4 class="col-md-12 pb-0 heading_tag">{{{welcometext}}}</h4>
+                                <img class = "login_logo" src="{{loginlogo}}" title="Login Logo" alt="Login Logo"/>
+                                <div class="col-md-12 pb-0">
+                                    <p class=" col-md-12 loginstart_tag text-center mb-0">{{{captiontext}}}</p>
+                                </div>
+                            {{/logourl}} -->
+
+                             <h4 class="w_msg ">OTP LOGIN</h4>
+                             <div class="sign_details">Enter the details below to otp log in to your account</div>
+
+                            <form class="mt-3" action="{{loginurl}}" method="post" id="login">
+                                <input id="anchor" type="hidden" name="anchor" value="">
+                                <script>document.getElementById('anchor').value = location.hash;</script>
+                                <input type="hidden" name="logintoken" value="{{logintoken}}">
+                                <div class="form-group">
+                         <!--          <label for="username" class="custom_lable">
+                                        {{#str}} phone2 {{/str}}
+                                    </label> -->
+
+                                <input type="tel" name="username" id="applicationid" class="form-control"
+                                       value="{{username}}" placeholder="{{#str}} phone2 {{/str}}" autocomplete="{{#str}} phone2 {{/str}}">
+                                </div>
+                                <div class="forgetpass">
+                                    <p><input class="btn btn-danger" type="button" id="sentotplink" value="{{#str}}generateotp, auth_otp{{/str}}" /></p>
+                                </div>
+                                <div id="loginpassdiv" style="display:none;">
+                                <div class="form-group">
+                                    <label for="password" class="custom_lable">{{#str}}  enterotp, theme_moove  {{/str}}</label>
+                                    <input type="password" name="password" id="password" value=""
+                                        class="form-control custom_control"
+                                        placeholder={{#quote}}{{#str}}enterotp, theme_moove{{/str}}{{/quote}}>
+                                </div>
+
+                                <div class="forgetpass">
+                                   <p><a href="#" class="fp_text" id="resendotplink">{{#str}}resentotp, theme_moove{{/str}}</a></p>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block mt-5 hiddennow" id="loginbtn">{{#str}}login, moodle{{/str}}</button>
+                            </div>
+                            </form>
+                        <div class="login-form-otplogin form-group text-center">
+                            <a href="{{{ config.wwwroot }}}/login/index.php">{{#str}}loginwithpassword, theme_moove{{/str}}</a>
+                        </div>
+                        <div class="login-form-forgotpassword form-group text-center">
+                            <a href="{{{ config.wwwroot }}}/login/otp_registration.php">{{#str}}otpregistration, theme_moove{{/str}}</a>
+                        </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{#maintenance}}
+    <div class="row justify-content-center mt-3">
+        <div class="col-xl-6 col-sm-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h2>{{#str}}sitemaintenance, core_admin{{/str}}</h2>
+                    </div>
+                    <div>
+                        {{{maintenance}}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/maintenance}}
+{{#js}}
+
+require(['jquery', 'core/ajax', 'core/notification','core/toast', 'core/str'], function($, ajax, Notification,Toast, Str) {
+
+
+    $("#sentotplink").click(function(e){
+
+        var countrycode =$('.iti__selected-flag').html();
+
+        countrycode = countrycode.match(/(\d+)/);
+
+        var application_id =  '+'+countrycode[0] + $('#applicationid').val();
+
+        var type = 1;
+
+        sendotp(application_id, type, 1,countrycode);
+
+    });
+    $("#resendotplink").click(function(e){
+
+        var countrycode =$('.iti__selected-flag').html();
+
+        countrycode = countrycode.match(/(\d+)/);
+
+        var application_id =  '+'+countrycode[0] + $('#applicationid').val();
+
+        var type = 1;
+
+        sendotp(application_id, type, 2,countrycode);
+
+    });
+
+    $("#loginbtn").click(function(e) {
+
+        e.preventDefault();
+
+        var countrycode =$('.iti__selected-flag').html();
+
+
+        countrycode = countrycode.match(/(\d+)/);
+
+        var application_id =  '+'+countrycode[0] + $('#applicationid').val();
+
+        var username=countrycode[0] + $('#applicationid').val();
+
+        var removeFirst2 = application_id.slice(3);
+
+        var otppassword =$("#password").val();
+
+        var type = 2;
+
+        if(removeFirst2 !='' && otppassword !='') {
+
+            var phoneno = /^\+[1-9]{1}[0-9]{3,14}$/;
+
+            if (phoneno.test(application_id)) {
+
+
+                    ajax.call([{
+                        methodname: 'auth_otp_validateuserdetails',
+                        args: {username: application_id, otp: otppassword, type: type},
+                        done: function(status) {
+
+                            if(status == 1) {
+
+                                $('input[name="username"]').val(username);
+
+                                $("#login").submit();
+
+                                return true;
+
+                            } else if(status == 2) {
+
+                                e.preventDefault();
+
+                                alert("OTP entered incorrect more than {{revokethreshold}} times. Please re-generate OTP");
+
+                                Toast.add('OTP entered incorrect more than {{revokethreshold}} times. Please re-generate OTP', {
+                                    delay: 30000,
+                                    closeButton: true,
+                                });
+
+                            } else if(status == 3) {
+
+                                e.preventDefault();
+
+                                alert("OTP incorrect, please enter correct OTP");
+
+
+                                Toast.add('OTP incorrect, please enter correct OTP', {
+                                    delay: 30000,
+                                    closeButton: true,
+                                });
+
+                            } else if(status == 4) {
+
+                                e.preventDefault();
+
+                                alert("OTP incorrect, please Regenerate OTP and try again");
+
+
+                                Toast.add('OTP incorrect, please Regenerate OTP and try again', {
+                                    delay: 30000,
+                                    closeButton: true,
+                                });
+
+
+                            }else if(status == 5) {
+
+                                e.preventDefault();
+
+                                alert("This is not OTP applicantionID");
+
+                                Toast.add('This is not OTP applicantionID', {
+                                    delay: 30000,
+                                    closeButton: true,
+                                });
+
+                            }else if(status == 7) {
+
+                                e.preventDefault();
+
+                                alert("One-time password for current session was already generated Please check.");
+
+                                Toast.add('One-time password for current session was already generated Please check.', {
+                                    delay: 30000,
+                                    closeButton: true,
+                                });
+
+                                $("#sentotplink").hide();
+                                $("#loginpassdiv").show();
+                                $('#loginbtn').removeClass('hiddennow');
+
+                            }else {
+
+                               e.preventDefault();
+
+                               alert("Please verify the mobile number and OTP");
+
+                               Toast.add('Please verify the mobile number and OTP', {
+                                delay: 30000,
+                                closeButton: true,
+                            });
+
+                            }
+                        }
+                    }]);
+
+            }else {
+
+                alert("insert Valid Phone number !!");
+
+                Toast.add('insert Valid Phone number !!', {
+                    delay: 30000,
+                    closeButton: true,
+                });
+            }
+
+
+        } else {
+
+            e.preventDefault();
+
+            if (removeFirst2 == '') {
+
+                alert("Please enter Mobile Number");
+
+                Toast.add('Please enter Mobile Number.', {
+                    delay: 30000,
+                    closeButton: true,
+                });
+
+            } else {
+
+                if ($('#loginbtn').hasClass('hiddennow')) {
+
+                    sendotp(application_id, 4, 1,countrycode);
+
+                } else {
+
+                    alert("Please enter OTP");
+
+                    Toast.add('Please enter OTP', {
+                        delay: 30000,
+                        closeButton: true,
+                    });
+                }
+            }
+        }
+    });
+
+    function sendotp(application_id, type, flag,countrycode) {
+
+        var removeFirst2 = application_id.slice(3);
+
+        if(removeFirst2 !='') {
+
+            var phoneno = /^\+[1-9]{1}[0-9]{3,14}$/;
+
+            var username=countrycode[0] + $('#applicationid').val();
+
+            if (phoneno.test(application_id)) {
+
+                try {
+                    ajax.call([{
+                        methodname: 'auth_otp_validateuserdetails',
+                        args: {username: application_id, otp: 0, type: type},
+                        done: function(status) {
+                            if (status == 3) {
+
+                                if (flag == 1) {
+
+                                    alert("Successfully sent OTP to your Mobile.");
+
+                                    Toast.add('Successfully sent OTP to your Mobile.', {
+                                        delay: 30000,
+                                        closeButton: true,
+                                    });
+
+                                } else if (flag == 2) {
+
+                                    alert("Successfully resent OTP to your Mobile.");
+
+                                    Toast.add('Successfully resent OTP to your Mobile.', {
+                                        delay: 30000,
+                                        closeButton: true,
+                                    });
+
+                                } else {
+
+                                    alert("Error in login");
+
+                                    Toast.add('Error in login', {
+                                        delay: 30000,
+                                        closeButton: true,
+                                    });
+                                }
+
+                                $("#sentotplink").hide();
+                                $("#loginpassdiv").show();
+                                $('#loginbtn').removeClass('hiddennow');
+
+                            } else if(status == 2) {
+
+                                alert("Please check your account mobile number");
+
+                                Toast.add('Please check your account mobile number', {
+                                    delay: 30000,
+                                    closeButton: true,
+                                });
+
+                            } else if(status == 1) {
+
+                                alert("Entered UserID does not exists");
+
+                                Toast.add('Entered UserID does not exists', {
+                                    delay: 30000,
+                                    closeButton: true,
+                                });
+
+                            } else if(status == 0) {
+
+                                alert("Error with OTP service");
+
+                                Toast.add('Error with OTP service', {
+                                    delay: 30000,
+                                    closeButton: true,
+                                });
+
+                            }else if(status == 5) {
+
+                                alert("This is not OTP applicantionID");
+
+                                Toast.add('This is not OTP applicantionID', {
+                                    delay: 30000,
+                                    closeButton: true,
+                                });
+
+                            }else if(status == 7) {
+
+                                alert("One-time password for current session was already generated Please check.");
+
+                                Toast.add('One-time password for current session was already generated Please check.', {
+                                    delay: 30000,
+                                    closeButton: true,
+                                });
+
+                                $("#sentotplink").hide();
+                                $("#loginpassdiv").show();
+                                $('#loginbtn').removeClass('hiddennow');
+
+                            }else {
+                                alert(status);
+                            }
+                        }
+                    }]).fail(Notification.exception);
+                } catch (e) {
+                    console.log(e);
+                }
+            }
+            else {
+
+                alert("insert Valid Phone number !!");
+
+                Toast.add('insert Valid Phone number !!', {
+                    delay: 30000,
+                    closeButton: true,
+                });
+            }
+        }else {
+
+            alert("Please enter Mobile Number");
+
+            Toast.add('Please enter Mobile Number.', {
+                delay: 30000,
+                closeButton: true,
+            });
+
+        }
+    }
+});
+{{#error}}
+    require(['jquery'], function($) {
+        $('#loginerrormessage').focus();
+    });
+{{/error}}
+{{^error}}
+    {{#autofocusform}}
+        require(['jquery'], function($) {
+            if ($('#username').val()) {
+                $('#password').focus();
+            } else {
+                $('#username').focus();
+            }
+        });
+    {{/autofocusform}}
+{{/error}}
+{{/js}}

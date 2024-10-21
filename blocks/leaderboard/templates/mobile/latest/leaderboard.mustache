@@ -1,0 +1,32 @@
+{{=<% %>=}}
+<ion-item class="title ion-text-wrap" [sticky]="true">
+    <p class="item-heading">{{ 'plugin.block_leaderboard.pluginname' | translate }}</p>
+</ion-item>
+<%# hasusers %>
+    <ion-list class="users-list">
+        <%# users %>
+            <ion-item class="ion-text-wrap user-info">
+                <ion-col size="1" class="rank">
+                    <ion-badge>#<% rank %></ion-badge>
+                </ion-col>
+                <ion-col size="8">
+                    <ion-item>
+                        <core-user-avatar user="{id: <% userid %>, fullname: <% fullname %>, profileimageurl: <% profileimageurl %>}" checkOnline="true" slot="start"></core-user-avatar>
+                        <p class="item-heading"><% fullname %></p>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label>
+                        <p class="leaderboard-points">
+                            <span class="pts"><% points %></span>
+                            <span class="sign sign-sup">{{ 'plugin.block_leaderboard.PT' | translate }}</span>
+                        </p>
+                    </ion-label>
+                </ion-col>
+            </ion-item>
+        <%/ users %>
+    </ion-list>
+    <ion-item>
+        <ion-button size="small" slot="end" core-site-plugins-new-content title="{{ 'plugin.block_leaderboard.pluginname' | translate }}" component="block_leaderboard" method="leaderboardladder" [args]="{limit: -1}" class="ion-text-wrap">{{ 'plugin.block_leaderboard.viewmore' | translate }}</ion-button>
+    </ion-item>
+<%/ hasusers %>

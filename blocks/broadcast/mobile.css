@@ -1,0 +1,42 @@
+.block_broadcast .broadcast-img {
+   width: 30%;
+   max-width: 30%;
+}
+.block_broadcast ion-card {
+   --ion-card-radius: 0px;
+   --ion-card-vertical-margin: 0px;
+   --ion-card-horizontal-margin: 0px;
+   background-image: url("@@WWWROOT@@/blocks/broadcast/pix/broadcast-bg.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: #FFF;
+}
+.block_broadcast ion-card ion-item {
+    --padding-start: 25%;
+    --background: auto;
+    --inner-padding-end: 4px;
+}
+ion-card.block_broadcast {
+      background-color: #EBF4FE;
+      --border-style: unset;
+      --border-radius: var(--radius-none) !important;
+}
+.block_broadcast ion-card {
+   border-color: #174471;
+   min-height: 105px;
+   --border-style: none;
+}
+.block_broadcast ion-label {
+   white-space: unset !important;
+   margin-left: 12px !important;
+}
+.block_broadcast core-format-text {
+   white-space: unset !important;
+}
+.block_broadcast ion-label core-format-text > *:not(pre) {
+   white-space: unset !important;
+}
+.block_broadcast core-format-text p, .block_broadcast .item core-format-text p {
+   --text-size: 12px;
+   font-size: 12px;
+}

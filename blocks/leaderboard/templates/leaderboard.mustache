@@ -1,0 +1,39 @@
+<!-- <div> 
+    <h5 class="card_name mb-4">
+        {{#str}} pluginname, block_leaderboard {{/str}}
+    </h5>
+</div> -->
+<div class="table-responsive px-2 py-2">
+    <table class="table table-striped" id="leaderboard">
+     <thead class="text-center bg-primary text-white d-none">
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            {{# leaderboarddata}}
+            <tr>
+                <td class=" d-flex align-self-center">
+                    <span class="ml-4">#{{rank}}</span>
+                </td>
+                <td>{{{profileimageurl}}}
+                    <a href="{{config.wwwroot}}/user/profile.php?id={{id}}" class="username">{{fullname}}</a>
+                </td>
+                <td class="text-left">
+                    <span class="pts">{{points}}</span>
+                    <span class="sign sign-sup">{{#str}} PT, block_leaderboard {{/str}}</span>
+                </td>
+            </tr>
+            {{/ leaderboarddata}}        
+            {{# viewmore}}
+                <tr>
+                    <td colspan="3">
+                        <div class="text-right">
+                                <a href="{{config.wwwroot}}/blocks/leaderboard/index.php">{{# str}} viewmore {{/ str}}</a>
+                        </div>
+                    </td>
+                </tr>
+            {{/ viewmore}}
+        </tbody>
+    </table>
+</div>

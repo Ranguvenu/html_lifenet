@@ -1,0 +1,43 @@
+<div class="stats_container">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-12 stats_column">
+            <div class="enrolled stats">
+                <div class="card">
+                    <div class="enrolled-statistics stat_card d-flex">
+                        <img src="{{config.wwwroot}}/blocks/statistics/pix/enrolled.png">
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <span class="category">{{#str}} enrolled, block_statistics {{/str}}</span>
+                            <span class="users">{{enrolled}}</span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 stats_column">
+            <div class="inprogress stats">
+                <div class="card">
+                    <div class="card-body inprogress-statistics stat_card d-flex">
+                        <img src="{{config.wwwroot}}/blocks/statistics/pix/In-Progress.png">
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <span class="category">{{#str}} inprogress, block_statistics {{/str}}</span> 
+                            <span class="users">{{inprogres}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 stats_column">
+            <div class="completed stats">
+                <div class="card">
+                    <div class="card-body completed-statistics stat_card d-flex">
+                        <img src="{{config.wwwroot}}/blocks/statistics/pix/completed.png">
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                             <span class="category">{{#str}} completed, block_statistics {{/str}}</span> 
+                             <span class="users">{{completed}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
